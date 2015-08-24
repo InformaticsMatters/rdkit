@@ -1,4 +1,4 @@
-FROM ubuntu:15.04
+FROM debian:jessie
 MAINTAINER Tim Dudgeon <tdudgeon@informaticsmatters.com>
 # WARNING this takes about an hour to build
 
