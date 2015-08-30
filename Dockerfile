@@ -32,4 +32,4 @@ RUN cmake ..
 RUN make
 RUN make install
 
-WORKDIR /
+WORKDIR $RDBASE
