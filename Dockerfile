@@ -2,7 +2,7 @@ FROM debian:jessie
 MAINTAINER Tim Dudgeon <tdudgeon@informaticsmatters.com>
 # WARNING this takes about an hour to build
 
-ENV RDKIT_BRANCH=Release_2015_03_1
+ENV RDKIT_BRANCH=master
 
 RUN apt-get update && apt-get install -y \
  flex\
