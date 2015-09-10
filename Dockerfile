@@ -17,7 +17,9 @@ RUN apt-get update && apt-get install -y \
  libboost-python-dev\
  libboost-regex-dev\
  swig2.0\
- git
+ git\
+ wget\
+ zip
 
 
 RUN git clone -b $RDKIT_BRANCH --single-branch https://github.com/rdkit/rdkit.git
@@ -26,9 +28,13 @@ ENV RDBASE=/rdkit
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$RDBASE/lib
 ENV PYTHONPATH=$PYTHONPATH:$RDBASE
 
+# InChi support
+WORKDIR $RDBASE/External/INCHI-API/
+RUN bash $RDBASE/External/INCHI-API/download-inchi.sh
+
 RUN mkdir $RDBASE/build
 WORKDIR $RDBASE/build
-RUN cmake .. 
+RUN cmake -DRDK_BUILD_INCHI_SUPPORT=ON .. 
 RUN make
 RUN make install
 
