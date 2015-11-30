@@ -2,8 +2,6 @@ FROM debian:jessie
 MAINTAINER Tim Dudgeon <tdudgeon@informaticsmatters.com>
 # WARNING this takes about an hour to build
 
-ENV RDKIT_BRANCH=master
-
 RUN apt-get update && apt-get install -y \
  flex\
  bison\
@@ -21,7 +19,7 @@ RUN apt-get update && apt-get install -y \
  wget\
  zip
 
-
+ENV RDKIT_BRANCH=master
 RUN git clone -b $RDKIT_BRANCH --single-branch https://github.com/rdkit/rdkit.git
 
 ENV RDBASE=/rdkit
