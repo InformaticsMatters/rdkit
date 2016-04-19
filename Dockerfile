@@ -3,6 +3,8 @@ MAINTAINER Tim Dudgeon <tdudgeon@informaticsmatters.com>
 # WARNING this takes about an hour to build
 
 RUN apt-get update && apt-get install -y \
+ flex\
+ bison\
  build-essential\
  python-numpy\
  cmake\
@@ -15,7 +17,6 @@ RUN apt-get update && apt-get install -y \
  libboost-serialization-dev\
  libboost-python-dev\
  libboost-regex-dev\
- swig2.0\
  git\
  wget\
  zip
