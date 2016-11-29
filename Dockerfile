@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
  wget\
  zip
 
-ENV RDKIT_BRANCH=master
+ENV RDKIT_BRANCH=Release_2016_09_2
 RUN git clone -b $RDKIT_BRANCH --single-branch https://github.com/rdkit/rdkit.git
 
 ENV RDBASE=/rdkit
