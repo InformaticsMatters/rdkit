@@ -5,6 +5,8 @@
 * `master` - build from current RDKit master branch
 * `Release_2015_03_1` - build from the Release_2015_03_1 release tag
 * `Release_2015_09_2` - build from the Release_2015_09_2 release tag
+* `Release_2016_03_1` - build from the Release_2016_03_1 release tag
+* `Release_2016_09_2` - build from the Release_2016_09_2 release tag
 
 GitHub repo for RDKit is [here](https://github.com/rdkit/rdkit).  
 GitHub repo for this project is [here](https://github.com/InformaticsMatters/rdkit)
