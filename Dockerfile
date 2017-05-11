@@ -2,7 +2,7 @@ FROM informaticsmatters/rdkit_debian_base
 MAINTAINER Tim Dudgeon <tdudgeon@informaticsmatters.com>
 # WARNING this takes about an hour to build
 
-ENV RDKIT_BRANCH=master
+ENV RDKIT_BRANCH=Release_2017_03_01
 RUN git clone -b $RDKIT_BRANCH --single-branch https://github.com/rdkit/rdkit.git
 
 ENV RDBASE=/rdkit
