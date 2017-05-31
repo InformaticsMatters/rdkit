@@ -2,7 +2,7 @@ FROM informaticsmatters/rdkit_debian_base
 MAINTAINER Tim Dudgeon <tdudgeon@informaticsmatters.com>
 # WARNING this takes about an hour to build
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update &&\
  apt-get upgrade -y &&\
  apt-get clean -y
  
