@@ -1,6 +1,10 @@
+# Dockerfile for Python based RDKit implementation
+# Based on Debian.
+# Includes InCHI support.
+# WARNING: this takes about an hour to build
+
 FROM informaticsmatters/rdkit_debian_base
 MAINTAINER Tim Dudgeon <tdudgeon@informaticsmatters.com>
-# WARNING this takes about an hour to build
 
 RUN apt-get update &&\
  apt-get upgrade -y &&\
@@ -18,8 +22,7 @@ WORKDIR $RDBASE/build
 
 RUN cmake -DRDK_BUILD_INCHI_SUPPORT=ON .. &&\
  make &&\
- make install &&\
- make clean 
+ make install
 
 USER rdkit
 WORKDIR $RDBASE
