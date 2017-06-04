@@ -10,7 +10,7 @@ RUN apt-get update &&\
  apt-get upgrade -y &&\
  apt-get clean -y
  
-ENV RDKIT_BRANCH=master
+ENV RDKIT_BRANCH=Release_2017_03_1
 RUN git clone -b $RDKIT_BRANCH --single-branch https://github.com/rdkit/rdkit.git
 
 ENV RDBASE=/rdkit
