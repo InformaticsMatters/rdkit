@@ -24,5 +24,5 @@ RUN cmake -DRDK_BUILD_INCHI_SUPPORT=ON .. &&\
  make &&\
  make install
 
-USER rdkit
+#USER rdkit
 WORKDIR $RDBASE
