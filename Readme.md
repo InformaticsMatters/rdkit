@@ -8,6 +8,7 @@
 * `Release_2016_03_1` - build from the Release_2016_03_1 release tag
 * `Release_2016_09_2` - build from the Release_2016_09_2 release tag
 * `Release_2017_03_1` - build from the Release_2017_03_1 release tag
+* `Release_2017_03_3` - build from the Release_2017_03_3 release tag
 
 
 GitHub repo for RDKit is [here](https://github.com/rdkit/rdkit).  
