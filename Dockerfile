@@ -10,7 +10,7 @@ RUN apt-get update &&\
  apt-get upgrade -y &&\
  apt-get clean -y
  
-ENV RDKIT_BRANCH=master
+ENV RDKIT_BRANCH=Release_2017_09_1
 RUN git clone -b $RDKIT_BRANCH --single-branch https://github.com/rdkit/rdkit.git
 
 ENV RDBASE=/rdkit
@@ -24,5 +24,4 @@ RUN cmake -DRDK_BUILD_INCHI_SUPPORT=ON .. &&\
  make &&\
  make install
 
-#USER rdkit
 WORKDIR $RDBASE
