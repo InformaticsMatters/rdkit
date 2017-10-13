@@ -22,7 +22,8 @@ WORKDIR $RDBASE/build
 
 RUN cmake -DRDK_BUILD_INCHI_SUPPORT=ON .. &&\
  make &&\
- make install
+ make install &&\
+ make clean
 
 #USER rdkit
 WORKDIR $RDBASE
