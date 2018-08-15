@@ -3,10 +3,10 @@
 # Includes InCHI support.
 # WARNING: this takes about an hour to build
 
-FROM debian:stretch
+FROM debian:buster
 MAINTAINER Tim Dudgeon <tdudgeon@informaticsmatters.com>
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
  build-essential\
  python-numpy\
  cmake\
@@ -37,9 +37,9 @@ ENV PYTHONPATH=$PYTHONPATH:$RDBASE
 RUN mkdir $RDBASE/build
 WORKDIR $RDBASE/build
 
-RUN cmake -DRDK_BUILD_INCHI_SUPPORT=ON .. &&\
- make &&\
- make install &&\
- make clean
+RUN nproc=$(getconf _NPROCESSORS_ONLN) &&\
+ cmake -DRDK_BUILD_INCHI_SUPPORT=OFF -DRDK_BUILD_PYTHON_WRAPPERS=ON .. &&\
+ make -j $(( nproc > 2 ? nproc - 2 : 1 )) &&\
+ make install
 
 WORKDIR $RDBASE
