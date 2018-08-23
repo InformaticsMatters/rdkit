@@ -18,6 +18,8 @@ The thinking behind this is described in our [blog](https://www.informaticsmatte
 * `Release_2016_09_2` - build from the Release_2016_09_2 release tag
 * `Release_2017_03_1` - build from the Release_2017_03_1 release tag
 * `Release_2017_03_3` - build from the Release_2017_03_3 release tag
+* `Release_2017_09_1` - build from the Release_2017_09_1 release tag
+* `Release_2017_03_4` - build from the Release_2018_03_4 release tag
 
 
 GitHub repo for RDKit is [here](https://github.com/rdkit/rdkit).
