@@ -4,7 +4,7 @@ These images are created by doing a full RDKit build within the container.
 As such they contain a lot of packages and are large in size and are NOT suitable for production hosting
 of services. Only use them if you need to have the entire RDKit build infrastructure in place.
 
-Fro production hosting you should instead use our second generation images that are hosted in this
+For production hosting you should instead use our second generation images that are hosted in this
 [GitHub repo](https://github.com/InformaticsMatters/docker-rdkit).
 The thinking behind this is described in our [blog](https://www.informaticsmatters.com/category/containers/index.html).
  
@@ -18,6 +18,8 @@ The thinking behind this is described in our [blog](https://www.informaticsmatte
 * `Release_2016_09_2` - build from the Release_2016_09_2 release tag
 * `Release_2017_03_1` - build from the Release_2017_03_1 release tag
 * `Release_2017_03_3` - build from the Release_2017_03_3 release tag
+* `Release_2017_09_1` - build from the Release_2017_09_1 release tag
+* `Release_2018_03_4` - build from the Release_2018_03_4 release tag
 
 
 GitHub repo for RDKit is [here](https://github.com/rdkit/rdkit).
